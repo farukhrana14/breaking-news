@@ -15,9 +15,9 @@ const TopHeadline = () => {
 
     return (
         <div>
-            <h1>Top Headlines: {articles.length}</h1>
+            <h1>Top Headlines: {articles && articles.length}</h1>
             {
-                articles.map(article => <News article = {article} key = {article.url}></News>)
+               articles && articles.map(article => <News article = {article} key = {article.url}></News>)
             }
         </div>
     );
